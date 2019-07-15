@@ -1,0 +1,72 @@
+@import "./src/assets/styles/index.scss";
+
+.footer {
+    background-color: $footer-background-color;
+
+    .container {
+        width: $container-width;
+        height: 100%;
+        margin: 0 auto;
+        padding-top: 40px;
+
+        .navigation {
+            @include headerFont();
+            font-size: 12px;
+            color: $footer-font-color;
+            .navigationItem {
+                &:after {
+                    content: "|";
+                    margin: 0 10px;
+                }
+                &:last-child {
+                    &:after {
+                        content: "";
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            @include headerFont();
+            font-size: 12px;
+            color: $copyright-font-color;
+            margin-top: 20px;
+        }
+
+        .links {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+
+            .social {
+                display: flex;
+                align-items: flex-start;
+                padding-top: 40px;
+
+                img {
+                    height: 30px;
+                    width: 30px;
+                    margin-right: 30px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .store {
+                display: flex;
+                align-items: flex-end;
+                padding-top: 40px;
+
+                img {
+                    height: 40px;
+                    margin-left: 30px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

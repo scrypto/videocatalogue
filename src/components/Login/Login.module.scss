@@ -1,0 +1,6 @@
+@import "./src/assets/styles/index.scss";
+
+.login {
+    @include headerFont();
+    color: $login-font-color;
+}

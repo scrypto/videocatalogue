@@ -1,0 +1,46 @@
+@import "./src/assets/styles/index.scss";
+
+.tile {
+    width: 120px;
+    margin: 17px;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .image {
+        @include transition();
+        height: 180px;
+        width: 120px;
+
+        &:hover {
+            height: 186px;
+            width: 126px;
+            margin: -3px;
+        }
+    }
+
+    .placeholder {
+        @include headerFont();
+        background: $tile-background-color url("/src/assets/images/placeholder.png") no-repeat fixed center;
+        background-size: 100% 100%;
+        height: 180px;
+        width: 120px;
+        line-height: 180px;
+        color: $placeholder-font-color;
+        font-size: 1.75em;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .title {
+        @include bodyFont();
+        text-align: left;
+        line-height: 15px;
+        font-size: 12px;
+        padding: 12px 0;
+    }
+}

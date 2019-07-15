@@ -1,0 +1,36 @@
+@import "./src/assets/styles/index.scss";
+
+.header {
+    @include linearGradient($header-background-color-top, $header-background-color-bottom);
+    height: 60px;
+
+    .container {
+        width: $container-width;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .title {
+            @include headerFont();
+            font-size: 2.5em;
+            color: $header-font-color;
+            text-shadow: 1px 1px $header-font-shadow-color;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .button {
+                @include headerFont();
+                background-color: $button-background-color;
+                color: $button-font-color;
+                padding: 10px 15px;
+                margin-left: 40px;
+            }
+        }
+    }
+}
